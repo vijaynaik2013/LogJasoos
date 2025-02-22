@@ -1,0 +1,52 @@
+Feb 14 00:06:52 vmaes2 kernel: tsrv[3513982]: segfault at 7f168d514e24 ip 00007f167c4b7a66 sp 00007ffe872232c0 error 4 in libg3pd.so[7f167c177000+3fc000]
+Feb 14 00:06:52 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 00:08:14 vmaes2 kernel: tsrv[3666239]: segfault at 7f81c4317e24 ip 00007f819c4b7a66 sp 00007ffdac78d9b0 error 4 in libg3pd.so[7f819c177000+3fc000]
+Feb 14 00:08:14 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1300 audit(1739497681.163:1176279): arch=c000003e syscall=84 success=no exit=-2 a0=5634c301e5b0 a1=0 a2=7fa7e0465c20 a3=0 items=1 ppid=1 pid=3793014 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=19072 comm="systemd" exe="/usr/lib/systemd/systemd" key="delete"
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1307 audit(1739497681.163:1176279): cwd="/"
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1302 audit(1739497681.163:1176279): item=0 name="/sys/fs/cgroup/cpuacct/user.slice/user-0.slice/user@0.service/mnt.mount" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1327 audit(1739497681.163:1176279): proctitle="(systemd)"
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1300 audit(1739497681.163:1176280): arch=c000003e syscall=84 success=no exit=-2 a0=5634c2ffbf40 a1=0 a2=7fa7e0465c20 a3=0 items=1 ppid=1 pid=3793014 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=19072 comm="systemd" exe="/usr/lib/systemd/systemd" key="delete"
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1307 audit(1739497681.163:1176280): cwd="/"
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1302 audit(1739497681.163:1176280): item=0 name="/sys/fs/cgroup/blkio/user.slice/user-0.slice/user@0.service/mnt.mount" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1327 audit(1739497681.163:1176280): proctitle="(systemd)"
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1300 audit(1739497681.163:1176281): arch=c000003e syscall=84 success=no exit=-2 a0=5634c301e5b0 a1=0 a2=7fa7e0465c20 a3=0 items=1 ppid=1 pid=3793014 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=19072 comm="systemd" exe="/usr/lib/systemd/systemd" key="delete"
+Feb 14 01:48:01 vmaes2 kernel: audit: type=1307 audit(1739497681.163:1176281): cwd="/"
+Feb 14 05:22:51 vmaes2 kernel: show_signal_msg: 50 callbacks suppressed
+Feb 14 05:22:51 vmaes2 kernel: tsrv[3669616]: segfault at 7f30e1f27e24 ip 00007f30ac4b7a66 sp 00007ffd33b579e0 error 4 in libg3pd.so[7f30ac177000+3fc000]
+Feb 14 05:22:51 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 05:23:28 vmaes2 kernel: tsrv[4087453]: segfault at 7fcf4a1e8e24 ip 00007fcf144b7a66 sp 00007ffe7a2bc640 error 4 in libg3pd.so[7fcf14177000+3fc000]
+Feb 14 05:23:28 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 05:27:03 vmaes2 kernel: tsrv[4088469]: segfault at 7fe9d6442e24 ip 00007fe9a5cbaa66 sp 00007ffeee55b650 error 4 in libg3pd.so[7fe9a597a000+3fc000]
+Feb 14 05:27:03 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 05:28:32 vmaes2 kernel: tsrv[4108889]: segfault at 7f4f8d7a8e24 ip 00007f4f604b7a66 sp 00007ffee1ff7360 error 4 in libg3pd.so[7f4f60177000+3fc000]
+Feb 14 05:28:32 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 05:31:06 vmaes2 kernel: tsrv[4110936]: segfault at 7fe0723bae24 ip 00007fe04c349a66 sp 00007ffeaa3172d0 error 4 in libg3pd.so[7fe04c009000+3fc000]
+Feb 14 05:31:06 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 05:32:35 vmaes2 kernel: tsrv[4130330]: segfault at 7fc09eb05e24 ip 00007fc078349a66 sp 00007ffd647bb850 error 4 in libg3pd.so[7fc078009000+3fc000]
+Feb 14 05:32:35 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 06:07:46 vmaes2 kernel: tsrv[4132619]: segfault at 7fc210cc0e24 ip 00007fc1e44b7a66 sp 00007ffee78848c0 error 4 in libg3pd.so[7fc1e4177000+3fc000]
+Feb 14 06:07:46 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 06:37:55 vmaes2 kernel: tsrv[4180515]: segfault at 7fe7e1ff73d4 ip 00007fe0642cba33 sp 00007ffcaf1782e0 error 4 in libg3pd.so[7fe0640c4000+3fc000]
+Feb 14 06:37:55 vmaes2 kernel: Code: d8 48 8b 80 b0 00 00 00 48 85 c0 74 48 48 8b 45 d8 48 8b 88 b0 00 00 00 48 8b 45 d8 48 8b 80 b0 00 00 00 48 8b 00 48 83 c0 28 <48> 8b 00 48 8b 55 d8 8b 92 a8 03 00 00 48 8b 75 d8 8b b6 b0 03 00
+Feb 14 06:39:09 vmaes2 kernel: tsrv[40212]: segfault at 7fd04e3c8e24 ip 00007fd028349a66 sp 00007ffd40d25670 error 4 in libg3pd.so[7fd028009000+3fc000]
+Feb 14 06:39:09 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 06:58:44 vmaes2 kernel: tsrv[44642]: segfault at 7f713f990e24 ip 00007f70f84b7a66 sp 00007ffcd8f62740 error 4 in libg3pd.so[7f70f8177000+3fc000]
+Feb 14 06:58:44 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 06:59:58 vmaes2 kernel: tsrv[82344]: segfault at 7fb67bfd9e24 ip 00007fb638cb8a66 sp 00007ffe8086c920 error 4 in libg3pd.so[7fb638978000+3fc000]
+Feb 14 06:59:58 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 07:02:52 vmaes2 kernel: tsrv[86410]: segfault at 7f1cf11b3e24 ip 00007f1cc44b7a66 sp 00007ffd2da93770 error 4 in libg3pd.so[7f1cc4177000+3fc000]
+Feb 14 07:02:52 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 07:04:14 vmaes2 kernel: tsrv[105817]: segfault at 7f39e4d15e24 ip 00007f39b44b7a66 sp 00007ffcaae7f750 error 4 in libg3pd.so[7f39b4177000+3fc000]
+Feb 14 07:04:14 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 07:05:29 vmaes2 kernel: tsrv[108433]: segfault at 7fe68b154e24 ip 00007fe64c4b7a66 sp 00007ffc56619270 error 4 in libg3pd.so[7fe64c177000+3fc000]
+Feb 14 07:05:29 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 07:34:51 vmaes2 kernel: tsrv[126065]: segfault at 7fc508533e24 ip 00007fc4dc4b7a66 sp 00007ffc5372c260 error 4 in libg3pd.so[7fc4dc177000+3fc000]
+Feb 14 07:34:51 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 07:39:05 vmaes2 kernel: traps: tsrv[177321] general protection fault ip:7f19022b11f4 sp:7ffcdc5c9248 error:0 in libstdc++.so.6.0.25[7f1902203000+186000]
+Feb 14 09:12:31 vmaes2 kernel: tsrv[200377]: segfault at 7f30d8289e24 ip 00007f3094cb8a66 sp 00007fff0a41ea00 error 4 in libg3pd.so[7f3094978000+3fc000]
+Feb 14 09:12:31 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 09:14:01 vmaes2 kernel: tsrv[330548]: segfault at 7f694ed8be24 ip 00007f69104b7a66 sp 00007ffc2de84c00 error 4 in libg3pd.so[7f6910177000+3fc000]
+Feb 14 09:14:01 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80
+Feb 14 09:23:56 vmaes2 kernel: tsrv[334992]: segfault at 7f99e3fe5e24 ip 00007f99a0cb8a66 sp 00007ffedc9cc200 error 4 in libg3pd.so[7f99a0978000+3fc000]
+Feb 14 09:23:56 vmaes2 kernel: Code: 48 8b 45 f8 48 83 c0 49 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 48 05 8a 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 <8b> 80 cc 00 00 00 5d c3 55 48 89 e5 48 89 7d f8 48 8b 45 f8 c7 80

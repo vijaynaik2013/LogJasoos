@@ -1,0 +1,83 @@
+<html><head><title>Anomaly Report</title><style>body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }h1, h2 { color: #333; }table { border-collapse: collapse; width: 100%; background: white; }th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }th { background-color: #4CAF50; color: white; }tr:nth-child(even) { background-color: #f2f2f2; }tr:hover { background-color: #ddd; }</style></head><body><h1>Anomaly Detection Report</h1><p>Total Log Lines Processed: 9015</p><p>Total Anomalies Detected: 451</p><h2>Log Files Analyzed</h2><ul><li>dmcc-error.log</li><li>dmcc-jtapi-error.log</li><li>dmcc-trace.log</li><li>dmcc-wrapper.log</li><li>kernel.log</li></ul><h2>Top 5 Errors and Files</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Error Message</th>
+      <th>File Name</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>License Service Timer Thread: com.avaya.cs.dataservice.config.DbConnection[106] WARN - ERROR: Connection pooling is not working. Restart pool...</td>
+      <td>dmcc-trace.log</td>
+      <td>501</td>
+    </tr>
+    <tr>
+      <td>WrapperListener_start_runner: com.avaya.common.nio.managed.tlsImpl[227] ERROR - Error while reading JVM FIPS config file.</td>
+      <td>dmcc-error.log</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>WrapperListener_start_runner: com.avaya.common.nio.managed.tlsImpl[227] ERROR - Error while reading JVM FIPS config file.</td>
+      <td>dmcc-trace.log</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>NIO-ChannelServicer Thread: com.avaya.common.nio.managed.tlsImpl[227] ERROR - Error while reading JVM FIPS config file.</td>
+      <td>dmcc-trace.log</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>NIO-ChannelServicer Thread: com.avaya.common.nio.managed.tlsImpl[227] ERROR - Error while reading JVM FIPS config file.</td>
+      <td>dmcc-error.log</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table><h2>Sample Anomalies</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>timestamp</th>
+      <th>message</th>
+      <th>filename</th>
+      <th>anomaly_score</th>
+      <th>corrective_action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025-02-14 06:35:25</td>
+      <td>NIO-ChannelServicer Thread: com.avaya.common.nio.managed.tlsImpl[227] ERROR - Error while reading JVM FIPS config file.</td>
+      <td>dmcc-error.log</td>
+      <td>-0.005559</td>
+      <td>Monitor logs for recurrence. No immediate action required.</td>
+    </tr>
+    <tr>
+      <td>2025-02-14 07:35:38</td>
+      <td>ReplicationServiceTimer: com.avaya.common.nio.managed.tlsImpl[227] ERROR - Error while reading JVM FIPS config file.</td>
+      <td>dmcc-error.log</td>
+      <td>-0.017855</td>
+      <td>Monitor logs for recurrence. No immediate action required.</td>
+    </tr>
+    <tr>
+      <td>2025-02-14 07:37:34</td>
+      <td>NIO-ChannelServicer Thread: com.avaya.common.nio.managed.tlsImpl[227] ERROR - Error while reading JVM FIPS config file.</td>
+      <td>dmcc-error.log</td>
+      <td>-0.011964</td>
+      <td>Monitor logs for recurrence. No immediate action required.</td>
+    </tr>
+    <tr>
+      <td>2025-02-14 09:24:24</td>
+      <td>WrapperListener_start_runner: com.avaya.common.nio.managed.tlsImpl[227] ERROR - Error while reading JVM FIPS config file.</td>
+      <td>dmcc-error.log</td>
+      <td>-0.011897</td>
+      <td>Monitor logs for recurrence. No immediate action required.</td>
+    </tr>
+    <tr>
+      <td>2025-02-14 06:08:15</td>
+      <td>WrapperListener_start_runner: com.avaya.jtapi.tsapi.tsapiInterface.Tsapi[696] INFO - sun.boot.class.path=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-2.el8.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-2.el8.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-2.el8.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-2.el8.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-2.el8.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-2.el8.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-2.el8.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-2.el8.x86_64/jre/classes</td>
+      <td>dmcc-jtapi-error.log</td>
+      <td>-0.093474</td>
+      <td>Monitor logs for recurrence. No immediate action required.</td>
+    </tr>
+  </tbody>
+</table></body></html>

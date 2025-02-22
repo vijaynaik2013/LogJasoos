@@ -1,6 +1,19 @@
 import os
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.ensemble import IsolationForest
+from datetime import datetime
+import re
+
+# Ensure the logs directory exists
+LOG_DIR = r"C:\Users\naik62\PycharmProjects\TrialByFire\LogAnalysis\Logs"
+os.makedirs(LOG_DIR, exist_ok=True)
+
+import os
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 from sklearn.ensemble import IsolationForest
 from datetime import datetime
 import re
@@ -36,6 +49,7 @@ def parse_log_line(line, filename):
     except Exception as e:
         print(f"Parsing error: {e} for line: {line.strip()}")
         return None
+
 
 def suggest_corrective_action(message, score):
     if "database connection failed" in message.lower():
@@ -108,11 +122,33 @@ def detect_anomalies(model, features, df):
         print(f"Anomalies saved to anomalies.csv ({len(anomalies)} detected)")
 
 
+def plot_anomaly_trend(anomalies):
+    if "timestamp" not in anomalies.columns:
+        print("Skipping anomaly trend plot: 'timestamp' column is missing.")
+        return
+
+    plt.figure(figsize=(10, 5))
+    anomalies = anomalies.copy()
+    anomalies.loc[:, "timestamp"] = pd.to_datetime(anomalies["timestamp"])
+    anomalies.set_index("timestamp", inplace=True)
+    anomalies.resample('h').count()["message"].plot(kind='line', color='red', marker='o', label='Anomalies Per Hour')
+    plt.xlabel("Timestamp")
+    plt.ylabel("Anomaly Count")
+    plt.title("Anomaly Trend Over Time")
+    plt.legend()
+    plt.grid()
+    plt.savefig("anomaly_trend.png")
+    plt.close()
+
+
 def generate_html_report(df, anomalies, log_files):
     report_file = "anomaly_report.html"
     top_5_errors = df[df["log_level"] == "ERROR"][["message", "filename"]].value_counts().reset_index()
     top_5_errors.columns = ["Error Message", "File Name", "Count"]
     top_5_errors = top_5_errors.head(5)
+
+    if not anomalies.empty and "timestamp" in anomalies.columns:
+        plot_anomaly_trend(anomalies)
 
     with open(report_file, "w", encoding="utf-8") as f:
         f.write("<html><head><title>Anomaly Report</title>")
@@ -141,7 +177,9 @@ def generate_html_report(df, anomalies, log_files):
             f.write("<h2>Top 5 Errors and Files</h2>")
             f.write(top_5_errors.to_html(index=False, escape=False))
 
-        if not anomalies.empty:
+        if not anomalies.empty and "timestamp" in anomalies.columns:
+            f.write("<h2>Anomaly Trend Over Time</h2>")
+            f.write("<img src='anomaly_trend.png' alt='Anomaly Trend' width='100%'>")
             f.write("<h2>Sample Anomalies</h2>")
             f.write(
                 anomalies[["timestamp", "message", "filename", "anomaly_score", "corrective_action"]].head().to_html(
